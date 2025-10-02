@@ -1,42 +1,5 @@
-'use client';
-/*
-RBC Landing Page – White Theme (Renamer-style)
-Framework: React (single-file), Tailwind utility classes
-Notes:
-- Keep accents blue (#2563EB / Tailwind blue-600) for CTAs and icons.
-- Apply reveal/hover utilities (from globals.css) where helpful.
-*/
-
-import { useMemo, useState, useEffect } from 'react'
-import { ArrowRight, Phone, Mail, MessageCircle, CheckCircle2, Hammer, Ruler, Building2, Factory, Sparkles, PanelsTopLeft } from "lucide-react"
-import { useReveal } from "./reveal"
-
-const COMPANY_NAME = "Rabia AlBadia Contracting Co."
-const CONTACT_EMAIL = "info@rbc-sa.com"
-const CONTACT_PHONE = "053 956 0033"
-const WHATSAPP_LINK = "https://wa.me/0539560033"
-
-export default function Site(){
-  const year = useMemo(()=> new Date().getFullYear(), [])
-  return (
-    <div className="min-h-dvh bg-white text-gray-900 antialiased">
-      <Header />
-      <main>
-        <Hero />
-        <ProofBar />
-        <Services />
-        <Workmanship />
-        <Projects />
-        <Process />
-        <CTA />
-      </main>
-      <Footer year={year} />
-    </div>
-  )
-}
-
-function Container({children}:{children:React.ReactNode}){
-  return <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
+export default function Home() {
+  return <main style={{ padding: 40 }}>✅ RBC home is live</main>;
 }
 
 function Header(){
