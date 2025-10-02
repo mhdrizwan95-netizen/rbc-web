@@ -1,5 +1,14 @@
 export default function Home() {
-  return <main style={{ padding: 40 }}>✅ RBC home is live</main>;
+  return (
+    <main className="min-h-dvh flex items-center justify-center p-8">
+      <div className="max-w-2xl text-center">
+        <h1 className="text-3xl font-semibold">✅ RBC home is live</h1>
+        <p className="mt-2 text-gray-600">
+          Routing and build are working. You can add the full landing content next.
+        </p>
+      </div>
+    </main>
+  );
 }
 
 function Header(){
