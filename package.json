@@ -1,0 +1,16 @@
+{
+  "name": "rbc-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.2.7",
+    "postcss": "^8.4.18",
+    "autoprefixer": "^10.4.14"
+  }
+}
