@@ -29,13 +29,6 @@ function Container({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-function Container({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      {children}
-    </div>
-  );
-}
 export default function Home() {
   return (
     <main className="min-h-dvh flex items-center justify-center p-8">
