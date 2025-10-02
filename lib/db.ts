@@ -42,7 +42,7 @@ async function loadData() {
 }
 
 // Save data to files
-async function saveProjects() {
+export async function saveProjects() {
   await ensureDataDir()
   await fs.writeFile(PROJECTS_FILE, JSON.stringify(projects, null, 2))
 }

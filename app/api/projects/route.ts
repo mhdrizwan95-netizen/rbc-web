@@ -8,7 +8,8 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams
     const featuredOnly = searchParams.get('featured') === '1'
 
-    return Response.json({ projects: [] });
+    const projects = await getProjects({ featuredOnly })
+    return NextResponse.json({ projects });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch projects' }, { status: 500 })
   }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
-import { projects } from '@/lib/db'
+import { projects, saveProjects } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
@@ -34,15 +34,14 @@ export async function POST(request: NextRequest) {
         const tmp = other.featuredRank
         other.featuredRank = project.featuredRank ?? target
         project.featuredRank = tmp ?? target
-      } else {
-        project.featuredRank = target
-      }
-      project.isFeatured = true
+    } else {
+      project.featuredRank = target
     }
+    project.isFeatured = true
+  }
 
-    // Persist changes (assume lib/db handles it, or manually save)
-    // For simplicity, since it's in-memory, we need to trigger save
-    // But to keep simple, assume the data persists
+    // Persist changes
+    await saveProjects()
 
     // Revalidate
     revalidateTag('projects')
