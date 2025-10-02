@@ -1,225 +1,211 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rabia AlBadia Contracting — Metal Fabrication in Riyadh</title>
-  <meta name="description" content="Metal fabrication & installation for Metro L3, KAFD, and critical infrastructure. Stainless steel handrails, GI/Aluminium rockwool panels, fencing & gates, cladding." />
-  <meta name="theme-color" content="#0b63ff" />
-  <meta property="og:title" content="Rabia AlBadia Contracting" />
-  <meta property="og:description" content="Precision metal works across Riyadh: SS handrails, GI/Aluminium panels, fencing & gates, cladding." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root{
-      /* ==== YOUR COLOR SCHEME (easy to tweak) ==== */
-      --bg:#0f1221;          /* dark steel base */
-      --surface:#151a2d;     /* panels/cards */
-      --line:#232842;        /* subtle borders */
-      --text:#f7f8fa;        /* main text */
-      --muted:#b8c0d0;       /* secondary text */
-      --brand:#0b63ff;       /* deep blue accent */
-      --brand-2:#094ed1;     /* hover shade */
-      --focus:#7aa7ff;       /* focus ring */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{
-      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text); background:var(--bg); line-height:1.6;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-    a{color:inherit}
-    img{max-width:100%; display:block}
-    .container{max-width:1200px; margin:auto; padding:0 20px}
-    .section{padding:80px 0}
-    h1,h2,h3{margin:0 0 12px; letter-spacing:-.02em}
-    h1{font-size:clamp(30px,6vw,56px); line-height:1.08}
-    h2{font-size:clamp(22px,4vw,36px)}
-    h3{font-size:20px}
-    p{margin:0 0 14px; color:var(--muted)}
-    .btn{
-      display:inline-block; padding:14px 22px; border-radius:12px;
-      background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
-      box-shadow:0 10px 28px rgba(11,99,255,.28); transition:.15s ease;
-    }
-    .btn:hover{background:var(--brand-2); transform:translateY(-1px)}
-    .btn:focus{outline:3px solid var(--focus); outline-offset:2px}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rabia AlBadia Contracting — Metal Fabrication in Riyadh</title>
+<meta name="description" content="Stainless steel handrails, GI/Aluminium rockwool panels, fencing & gates (HDG), cladding & skylights. On-time, to spec, QA/QC." />
+<meta name="theme-color" content="#0b63ff" />
+<style>
+  :root{
+    /* your palette */
+    --bg:#0f1221;           /* dark steel */
+    --panel:#151a2d;        /* surfaces */
+    --line:#232842;         /* borders */
+    --text:#f7f8fa;         /* main text */
+    --muted:#b8c0d0;        /* secondary */
+    --brand:#0b63ff;        /* blue accent */
+    --brand-2:#094ed1;      /* hover */
+    --focus:#7aa7ff;        /* focus ring */
+    --radius:16px;
+    --shadow:0 18px 60px rgba(0,0,0,.36);
+  }
+  /* reset + type */
+  *{box-sizing:border-box} html,body{margin:0}
+  body{
+    font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--text); background:var(--bg); line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  img{display:block; max-width:100%}
+  a{color:inherit; text-decoration:none}
+  h1,h2,h3{margin:0 0 12px; letter-spacing:-.02em}
+  h1{font-size:clamp(30px,6vw,56px); line-height:1.08}
+  h2{font-size:clamp(22px,4vw,36px)}
+  h3{font-size:20px}
+  p{margin:0 0 14px; color:var(--muted)}
+  .container{max-width:1200px; margin:auto; padding:0 20px}
+  .section{padding:88px 0} /* more breathing room = renamer feel */
 
-    /* ===== header ===== */
-    .hdr{position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(1.2) blur(8px);
-      background:color-mix(in oklab, var(--bg) 78%, transparent);
-      border-bottom:1px solid var(--line);
-    }
-    .hdr-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
-    .brand-dot{width:10px; height:10px; border-radius:50%; background:var(--brand)}
-    .nav a{padding:8px 10px; border-radius:8px; text-decoration:none; color:var(--muted)}
-    .nav a:hover{color:var(--text); background:#1a2140}
+  /* header: sticky + blur */
+  .hdr{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:saturate(1.2) blur(10px);
+    background:color-mix(in oklab, var(--bg) 78%, transparent);
+    border-bottom:1px solid var(--line);
+  }
+  .hdr-inner{display:flex; justify-content:space-between; align-items:center; padding:14px 0}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--brand)}
+  .nav a{padding:8px 12px; border-radius:9px; color:var(--muted)}
+  .nav a:hover{background:#1a2140; color:var(--text)}
 
-    /* ===== hero (renamer.ai vibe) ===== */
-    .hero{
-      min-height:78vh; display:grid; place-items:center; text-align:center;
-      background:
-        radial-gradient(1200px 600px at 70% -10%, rgba(11,99,255,0.18), transparent 60%),
-        radial-gradient(900px 500px at -10% 110%, rgba(11,99,255,0.12), transparent 60%),
-        linear-gradient(180deg,#0f1221 0%,#0b0e19 100%);
-    }
-    .hero .tag{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px; border:1px solid var(--line); border-radius:999px;
-      color:var(--muted); font-size:12px; background:rgba(255,255,255,.02); margin-bottom:12px;
-    }
-    .hero p{max-width:780px; margin:0 auto 22px}
-    .frame{
-      margin:24px auto 0; border:1px solid var(--line); border-radius:16px; overflow:hidden;
-      box-shadow:0 30px 80px rgba(0,0,0,.45); max-width:1100px
-    }
-    .frame img{width:100%; height:auto}
+  /* hero: gradient glow background + tag pill + framed image */
+  .hero-wrap{
+    min-height:78vh; display:grid; place-items:center; text-align:center;
+    background:
+      radial-gradient(1200px 600px at 70% -10%, rgba(11,99,255,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(11,99,255,.12), transparent 60%),
+      linear-gradient(180deg,#0f1221 0%, #0b0e19 100%);
+  }
+  .tag{
+    display:inline-flex; gap:8px; align-items:center;
+    padding:8px 12px; border:1px solid var(--line); border-radius:999px;
+    color:var(--muted); font-size:12px; background:rgba(255,255,255,.02); margin-bottom:12px;
+  }
+  .btn{
+    display:inline-block; padding:14px 22px; border-radius:12px;
+    background:var(--brand); color:#fff; font-weight:600;
+    box-shadow:0 12px 30px rgba(11,99,255,.28);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--brand-2); transform:translateY(-1px)}
+  .btn:focus{outline:3px solid var(--focus); outline-offset:2px}
+  .frame{
+    margin:24px auto 0; border:1px solid var(--line);
+    border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+    max-width:1100px;
+  }
 
-    /* ===== values ===== */
-    .grid{display:grid; gap:22px}
-    .values{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{
-      background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);
-    }
+  /* cards + grids */
+  .grid{display:grid; gap:24px}
+  .values{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .projects{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); text-align:center}
 
-    /* ===== projects ===== */
-    .projects{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .project-card{overflow:hidden; padding:0}
-    .project-card img{width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--line)}
-    .project-card .content{padding:14px 16px}
-    .muted{color:var(--muted); font-size:14px}
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:var(--radius); padding:22px; box-shadow:0 12px 26px rgba(0,0,0,.25);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .card.hoverable:hover{ transform:translateY(-2px); box-shadow:0 18px 44px rgba(0,0,0,.35); border-color:#2b3762}
+  .project-card{padding:0; overflow:hidden}
+  .project-card img{width:100%; height:220px; object-fit:cover; border-bottom:1px solid var(--line)}
+  .project-card .content{padding:16px}
 
-    /* ===== services ===== */
-    .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); text-align:center}
+  /* tiny motion (respect reduced motion) */
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
+    .reveal.in{opacity:1; transform:none}
+  }
 
-    /* ===== contact ===== */
-    .contact{text-align:center}
-
-    /* ===== footer ===== */
-    footer{border-top:1px solid var(--line); color:var(--muted); text-align:center; padding:24px 16px}
-
-    /* small helpers */
-    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
-  </style>
+  footer{border-top:1px solid var(--line); color:var(--muted); text-align:center; padding:26px 16px}
+  .muted{color:var(--muted); font-size:14px}
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="hdr" aria-label="Site header">
-    <div class="container hdr-inner">
-      <div class="brand">
-        <span class="brand-dot" aria-hidden="true"></span>
-        Rabia AlBadia
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="hdr">
+  <div class="container hdr-inner">
+    <div class="brand"><span class="dot" aria-hidden="true"></span>Rabia AlBadia</div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-wrap section">
+  <div class="container">
+    <span class="tag">Metal Fabrication · Riyadh</span>
+    <h1>Precision Metal Works for Metro, KAFD, and Critical Infrastructure</h1>
+    <p style="max-width:780px;margin:0 auto 22px">Stainless steel handrails, GI/Aluminium rockwool panels, fencing & gates (HDG), cladding & skylights — delivered on time, to spec, and signed off with QA/QC.</p>
+    <a class="btn" href="#projects">View Projects</a>
+    <div class="frame"><img src="/assets/img/hero/hero.jpg" alt="Your flagship project (hero image)"></div>
+    <p class="muted" style="margin-top:10px">Riyadh Metro L3 · KAFD AWCS · Stainless · GI · HDG</p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="grid values" style="margin-top:28px">
+      <div class="card reveal"><h3>Quality Craftsmanship</h3><p>Built to ASTM / BS EN standards with documented QA/QC.</p></div>
+      <div class="card reveal"><h3>On-Time Delivery</h3><p>Operator-first planning and tight site coordination.</p></div>
+      <div class="card reveal"><h3>Certified Materials</h3><p>GI, stainless, and aluminium with full traceability.</p></div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero section" id="home">
-    <div class="container">
-      <span class="tag">Metal Fabrication · Riyadh</span>
-      <h1>Precision Metal Works for Metro, KAFD, and Critical Infrastructure</h1>
-      <p>Stainless steel handrails, GI/Aluminium rockwool panels, fencing & gates (HDG), cladding & skylights — delivered on time, to spec, and signed off with QA/QC.</p>
-      <a class="btn" href="#projects">View Projects</a>
-      <!-- Replace with your hero image URL (host in repo /images/hero.jpg) -->
-      <div class="frame" style="margin-top:20px">
-        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1600&auto=format&fit=crop" alt="Sample project hero image" />
-      </div>
-      <p class="muted" style="margin-top:10px">Riyadh Metro L3 · KAFD AWCS · Stainless · GI · HDG</p>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="grid projects" style="margin-top:28px">
+      <!-- replace these three cards with your images/text -->
+      <article class="card project-card hoverable reveal">
+        <img src="/assets/img/projects/riyadh-metro-cover.jpg" alt="Riyadh Metro – SS Handrails" loading="lazy" decoding="async">
+        <div class="content">
+          <h3>Riyadh Metro – SS Handrails</h3>
+          <p class="muted">Fabrication & install at Line 3 stations with QA/QC approvals.</p>
+        </div>
+      </article>
+      <article class="card project-card hoverable reveal">
+        <img src="/assets/img/projects/kafd-awcs-cover.jpg" alt="KAFD – AWCS Fence & Gates" loading="lazy" decoding="async">
+        <div class="content">
+          <h3>KAFD – AWCS Fence & Gates</h3>
+          <p class="muted">Perimeter fencing (HDG) and swing gates; fast-track delivery.</p>
+        </div>
+      </article>
+      <article class="card project-card hoverable reveal">
+        <img src="/assets/img/projects/four-seasons-cover.jpg" alt="Four Seasons — lobby brass & stair" loading="lazy" decoding="async">
+        <div class="content">
+          <h3>Four Seasons – Kingdom Tower</h3>
+          <p class="muted">Lobby brass screens & staircase metal works.</p>
+        </div>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Values -->
-  <section class="section">
-    <div class="container">
-      <h2>Why Choose Us</h2>
-      <div class="grid values" style="margin-top:26px">
-        <div class="card"><h3>Quality Craftsmanship</h3><p>Built to ASTM / BS EN standards with documented QA/QC.</p></div>
-        <div class="card"><h3>On-Time Delivery</h3><p>Operator-first planning and tight site coordination.</p></div>
-        <div class="card"><h3>Certified Materials</h3><p>GI, stainless, and aluminium with full traceability.</p></div>
-      </div>
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="grid services" style="margin-top:28px">
+      <div class="card hoverable reveal"><h3>Stainless Steel Handrails</h3><p>Custom fabricated, site-installed, safety-compliant.</p></div>
+      <div class="card hoverable reveal"><h3>GI/Aluminium Rockwool Panels</h3><p>Insulated enclosures, cladding & technical rooms.</p></div>
+      <div class="card hoverable reveal"><h3>Fencing & Gates (HDG)</h3><p>Perimeter protection built for desert conditions.</p></div>
+      <div class="card hoverable reveal"><h3>Cladding & Skylights</h3><p>Durable architectural finishes for public spaces.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section class="section" id="projects">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="grid projects" style="margin-top:26px">
-        <!-- Replace image URLs and blurbs with your own -->
-        <article class="card project-card">
-          <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=1200&auto=format&fit=crop" alt="Riyadh Metro – Stainless steel handrails" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Riyadh Metro – SS Handrails</h3>
-            <p class="muted">Fabrication & installation at Line 3 stations with QA/QC approvals.</p>
-          </div>
-        </article>
-        <article class="card project-card">
-          <img src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62?q=80&w=1200&auto=format&fit=crop" alt="KAFD – AWCS Fence & Gates" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>KAFD – AWCS Fence & Gates</h3>
-            <p class="muted">Perimeter fencing (HDG) and swing gates; fast-track delivery.</p>
-          </div>
-        </article>
-        <article class="card project-card">
-          <img src="https://images.unsplash.com/photo-1600607686820-6af41e1991a1?q=80&w=1200&auto=format&fit=crop" alt="Four Seasons – Lobby brass & stair" loading="lazy" decoding="async">
-          <div class="content">
-            <h3>Four Seasons – Kingdom Tower</h3>
-            <p class="muted">Lobby brass screens & staircase metal works.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+<!-- CONTACT -->
+<section class="section" id="contact" aria-labelledby="contact-h">
+  <div class="container" style="text-align:center">
+    <h2 id="contact-h">Contact</h2>
+    <p>Email: <a href="mailto:info@rbc-sa.com">info@rbc-sa.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener">+966 5X XXX XXXX</a></p>
+    <p>Location: Riyadh, Saudi Arabia</p>
+  </div>
+</section>
 
-  <!-- Services -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid services" style="margin-top:26px">
-        <div class="card"><h3>Stainless Steel Handrails</h3><p>Custom fabricated, site-installed, safety-compliant.</p></div>
-        <div class="card"><h3>GI/Aluminium Rockwool Panels</h3><p>Insulated enclosures, cladding & technical rooms.</p></div>
-        <div class="card"><h3>Fencing & Gates (HDG)</h3><p>Perimeter protection for harsh desert environments.</p></div>
-        <div class="card"><h3>Cladding & Skylights</h3><p>Durable architectural finishes for public spaces.</p></div>
-      </div>
-    </div>
-  </section>
+<footer>© 2025 Rabia AlBadia Contracting Co. · CR & VAT Registered</footer>
 
-  <!-- Contact -->
-  <section class="section" id="contact" aria-labelledby="contact-h">
-    <div class="container contact">
-      <h2 id="contact-h">Contact</h2>
-      <p>Email: <a href="mailto:info@rbc-sa.com">info@rbc-sa.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener">+966 5X XXX XXXX</a></p>
-      <p>Location: Riyadh, Saudi Arabia</p>
-    </div>
-  </section>
-
-  <footer>© 2025 Rabia AlBadia Contracting Co. · CR & VAT Registered</footer>
-
-  <script>
-    // tiny polish: smooth anchor scroll, reduced motion aware
-    (function(){
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if(!el) return;
-          e.preventDefault();
-          const y = el.getBoundingClientRect().top + window.scrollY - 70;
-          window.scrollTo({top:y, behavior: reduce ? 'auto' : 'smooth'});
-        });
-      });
-    })();
-  </script>
+<script>
+  // subtle "reveal" on scroll (renamer-style polish)
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els=[...document.querySelectorAll('.reveal')];
+    const io=new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    els.forEach(el=>io.observe(el));
+  })();
+</script>
 </body>
 </html>
