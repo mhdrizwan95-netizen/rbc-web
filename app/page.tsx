@@ -1,3 +1,41 @@
+'use client';
+
+import { useMemo, useState, useEffect } from "react";
+import { 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MessageCircle, 
+  CheckCircle2, 
+  Hammer, 
+  Ruler, 
+  Building2, 
+  Factory, 
+  Sparkles, 
+  PanelsTopLeft 
+} from "lucide-react";
+
+import { useReveal } from "@/lib/reveal";
+
+const COMPANY_NAME = "Rabia AlBadia Contracting Co.";
+const CONTACT_EMAIL = "info@rbc-sa.com";
+const CONTACT_PHONE = "+966539560033";
+const WHATSAPP_LINK = "https://wa.me/966539560033";
+
+function Container({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
+  );
+}
+function Container({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
+  );
+}
 export default function Home() {
   return (
     <main className="min-h-dvh flex items-center justify-center p-8">
